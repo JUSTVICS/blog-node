@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= post.title %></title>
+  </head>
+  <body>
+    <h1><%= post.title %></h1>
+    <p><%= post.content %></p>
+    <form method="get" action="/edit?id=<%= post.id %>">
+      <button type="submit">Edit Post</button>
+    </form>
+    <form method="post" action="/delete">
+      <input type="hidden" name="id" value="<%= post.id %>">
+      <button type="submit">Delete Post</button>
+    </form>
+  </body>
+</html>
